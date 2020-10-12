@@ -22,7 +22,7 @@ a:hover {
     }
 
 tr:hover {
-    background-color: red;
+    background-color: grey;
 }
 
 tr:nth-child(odd) {background: #FFF}
