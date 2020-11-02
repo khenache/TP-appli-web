@@ -22,7 +22,10 @@
         </body>
 
         
-    <form id="formAW" onsubmit="validation()">
+        <fieldset>
+            <legend>informations d'identification personnelle </legend>
+            
+            <form id="formAW" onsubmit="validation()">
     <label for="NOM ">Nom :</label>
     <input type="text" id="Nom" name="nom" placeholder="ex: gorge" maxlength=30 class="inputAW"/>
     <br/>
@@ -41,7 +44,7 @@
     <label for="Ville">Ville :</label>
 
     <input type="text" id="Ville" name="Ville" placeholder="ex: Pierrefitte " class="inputAW"/>
-
+</fieldset>
       
       <p>
       <input type="button" value="Valider" onclick="validation()"/>
