@@ -1,24 +1,16 @@
-body{
-    font-family: 'Comic sans ms'
-  }
-  
-  form{
-    text-align : center;
-  }
-  
-  label{
-     font-family: 'Arial';
-      width: 100px;
-      display: inline-block;
-  }
-  
-  #error, #resultat{
-    display : none;
-  }
-  
-  
-  .display{
-    display : block !important;
-  }
-  
-  
+label{
+  width: 150px;
+  display: inline-block;
+}
+
+#error {
+  background-color: pink;
+  padding: 5px;
+  border: black 1px;
+}
+
+#resultat {
+  background: green;
+  padding: 5px;
+  color: white;
+}

@@ -12,33 +12,35 @@
     }
 }
 
-table {
-    border-spacing: 5px;
+/* make image bigger mouseover */
+.grande-image:hover{
+    transform:scale(1.5,1.5);
+}
+
+ /* padding espace linge */
+th, td {
+    padding: 2px 2px 2px 10px;
+    text-align: left;
   }
 
+ /*  */
 a:hover {
     color:orange;
     text-decoration:none;
     }
-
-tr:hover {
-    background-color: grey;
-}
-
 tr:nth-child(odd) {background: #FFF}
-
-table.color_line tr:nth-child(2n+0) td {
-    color: green; 
+/* Au survol de la souris, changer la couleur de fond de chaque ligne du tableau */
+tr:hover {
+    background-color: red;
+}
+th:hover{
+    background-color: red;
 }
 
-  #Titre{
-    text-align: center
-
-  }
+Titre {
+    text-align: center;
+}
 
 h1{
-
-text-transform: uppercase;
-
-
+    text-transform: uppercase;
 }
