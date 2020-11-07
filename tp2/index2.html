@@ -6,54 +6,66 @@
         <title>TP2 Formulaire </title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <style>
+       
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+       <style>
           body{
               background-color: #a6bee2;              
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 30px;
+              font-size: 20px;
               margin: 0 auto;
               max-width: 900px;              
           }
         </style>
+          <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+          <link rel="stylesheet" href="./Formulaire.css" />
+          <script src="./Programme.js"></script>         
     </head>
         <body>        
-            <h1>Saisi d'une fiche "Personne" </h1>
+            <h1> Saisi d'une fiche "Personne" </h1>
         </body>
 
-      </br>
+        </br>
+  <fieldset style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
+        
+    <legend style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;" ><b> informations d'identification personnelle <b> </legend>
       
-        <fieldset>
-            <legend>informations d'identification personnelle </legend>
             
-            <form id="formAW" onsubmit="validation()">
-    <label for="Nom ">Nom :</label>
-    <input type="text" id="Nom" name="Nom" placeholder="ex: gorge" maxlength="45" class="inputAW"/>
-    <br/>
-    
-    <label for="Date de naissance">Date de naissance : </label>
-    <input type="date" id="date de naissance" name="date de naissance" placeholder="ex: 01/10/2000" class="inputAW" maxlength="20"/> <br/>
-    
-    <label for="E-mail">E-mail :</label>
-    <input type="email" id="e-mail" name="e-mail" placeholder="ex: marcel.dupont@exemple.com" class="inputAW"/>
+    <form id="formAW" onsubmit="validation()">
+       <!-----  Nom  ------->
+      <label for="Nom ">Nom :</label>
+      <input type="text" id="Nom" name="Nom" placeholder="ex: Bernard" maxlength="45" class="inputAW"/>
       <br/>
-    
-    <label for="Adresse">Adresse :</label>
-    
-    <input type="text" id="adresse" name="adresse" placeholder="ex: 10 Rue pierrehuet " class="inputAW"/>
-
-    <label for="Ville">Ville :</label>
-
-    <input type="text" id="Ville" name="Ville" placeholder="ex: Pierrefitte " class="inputAW"/>
-</fieldset>
+       <!-----  Prénom  ------->
+      <label for="Prénom">Prénom :</label>
+      <input type="text" id="Prénom" name="Prénom" placeholder="ex: Emma" maxlength="45" class="inputAW"/>
+      <br/>
+      <!-----  Date de naissance ------->
+      <label for="Date de naissance">Date de naissance : </label>
+      <input type="date" id="date de naissance" name="date de naissance" placeholder="ex: 01/10/2000" class="inputAW" maxlength="20"/> 
+      <br/>
+      <!-----  Email  ------->
+      <label for="E-mail">E-mail :</label>
+      <input type="email" id="e-mail" name="e-mail" placeholder="ex: marcel.dupont@exemple.com" class="inputAW"/>
+      <br/>
+      <!-----  Adresse  ------->
+      <label for="Adresse">Adresse :</label>
+      <input type="text" id="adresse" name="adresse" placeholder="ex: 10 Rue pierrehuet " class="inputAW"/>
+      <!-----  Ville  ------->
+      <label for="Ville">Ville :</label>
+      <input type="text" id="Ville" name="Ville" placeholder="ex: Pierrefitte " class="inputAW"/>
       
       <p>
       <input type="button" value="Valider" onclick="validation()"/>
       </p>
       
-      </form>
-    
-    <div id="error"></div>
-    <div id="resultat"></div>
+    </form>
+  </fieldset>
 
-    </html>
+  <!-- msg d'erreur -->
+  <div id="error"></div>
+  <!-- msg de validation -->
+  <div id="resultat"></div>
+
+</html>
