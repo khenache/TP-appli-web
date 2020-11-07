@@ -1,3 +1,10 @@
+legend {
+    background-color: rgb(31, 218, 162);
+    color: #fff;
+    padding: 5px 50px;
+}
+
+
 #titre_page{
     color: rgb(4, 80, 73);
     text-align: center;
@@ -31,10 +38,10 @@ a:hover {
 tr:nth-child(odd) {background: #FFF}
 /* Au survol de la souris, changer la couleur de fond de chaque ligne du tableau */
 tr:hover {
-    background-color: red;
+    background-color:rgb(248, 235, 164);
 }
 th:hover{
-    background-color: red;
+    background-color:rgb(248, 235, 164);
 }
 
 Titre {
