@@ -4,7 +4,7 @@ label{
 }
 
 #error {
-  background-color: pink;
+  background-color:red;
   padding: 5px;
   border: black 1px;
 }

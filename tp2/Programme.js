@@ -1,6 +1,5 @@
 function validation(){
-    
-  // ou faire une validation de tous les champs en une seule fois
+      // ou faire une validation de tous les champs en une seule fois
   document.getElementById("error").innerHTML = "";
   
 for(let item of document.querySelectorAll('.inputAW')){
