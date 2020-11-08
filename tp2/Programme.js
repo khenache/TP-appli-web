@@ -3,18 +3,12 @@ function validation(){
   document.getElementById("error").innerHTML = "";
   
 for(let item of document.querySelectorAll('.inputAW')){
-  if(item.value == ""){
+  if(item.value.length < 5){
+    var label =   document.querySelector("label[for="+item.id+"]").textContent;
+    document.getElementById("error").innerHTML += `Ce champ doit comporter au Minimum 5 caractères : ${label} <br/>`;
+    document.getElementById("error").classList.add("display");
+    document.getElementById("resultat").classList.remove("display")
 
-      var label =   document.querySelector("label[for="+item.id+"]").textContent;
-      document.getElementById("error").innerHTML += ` ce champ est obligatoire: ${label} <br/>`;
-      document.getElementById("error").classList.add("display");
-      document.getElementById("resultat").classList.remove("display")
-
-  }else if(item.value.length < 5){
-      var label =   document.querySelector("label[for="+item.id+"]").textContent;
-      document.getElementById("error").innerHTML += `Ce champ doit comporter au Minimum 5 caractères : ${label} <br/>`;
-      document.getElementById("error").classList.add("display");
-      document.getElementById("resultat").classList.remove("display")
   }
 }
 if(document.getElementById("error").innerHTML == ""){
