@@ -35,15 +35,15 @@
     <form id="formAW" onsubmit="validation()">
        <!-----  Nom  ------->
       <label for="Nom ">Nom :</label>
-      <input type="text" id="Nom" name="Nom" placeholder="ex: Bernard" maxlength="45" class="inputAW"/>
+      <input type="text" id="Nom" name="Nom" placeholder="ex: Bernard" minlength=5 maxlength="45" class="inputAW"/>
       <br/>
        <!-----  Prénom  ------->
-          <label for="Prénom">Prénom :</label>
-          <input type="text" id="Prénom" name="Prénom" placeholder="ex: Emma" maxlength="45" class="inputAW"/>
+      <label for="Prénom">Prénom :</label>
+      <input type="text" id="Prénom" name="Prénom" placeholder="ex: Emma" minlength=5 maxlength="45" class="inputAW"/>
       <br/>
       <!-----  Date de naissance ------->
       <label for="Date de naissance">Date de naissance : </label>
-      <input type="date" id="date de naissance" name="date de naissance" placeholder="ex: 01/10/2000" class="inputAW" maxlength="20"/> 
+      <input type="date" id="date de naissance" name="date de naissance" placeholder="ex: 01/10/2000" minlength=5 class="inputAW" maxlength="20"/> 
       <br/>
       <!-----  Email  ------->
       <label for="E-mail">E-mail :</label>
