@@ -7,9 +7,8 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
        
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
         <style>
+
           body{
               background-color: #a6bee2;              
               font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
@@ -19,62 +18,64 @@
           }
         </style>
         
-         <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-         <link rel="stylesheet" href="./Formulaire.css" />
-         <script src="./Programme.js"></script>
+        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+        <link rel="stylesheet" href="./Formulaire.css" />
+        <script src="./Programme.js"></script>
 
     </head>
+    
     <body>        
-        <body>        
-            <h1> Saisi d'une fiche "Personne" </h1>
-     <fieldset style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
+          
+        <h1> Saisi d'une fiche "Personne" </h1>
+     
+        <fieldset style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
         
-    <legend style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;" ><b> informations d'identification personnelle <b> </legend>
-
+          <legend style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;" ><b> informations d'identification personnelle <b> </legend>
+ 
     
         
-        <!-- Class de saisie -->
-        <form id="formAW" onsubmit="validation()">
+            <!----- Class de saisie ----->
+            <form id="formAW" onsubmit="validation()">
 
-            <!-- Nom -->
-            <label for="nom"> Nom  </label>
-            <input type="text" id="nom" name="nom" placeholder="ex: Bernard" minlength=5 maxlength=20 class="inputAW" >
-            <br><br>
+               <!----- Nom ----->
+               <label for="nom"> Nom  </label>
+               <input type="text" id="nom" name="nom" placeholder="ex: Bernard" minlength=5 maxlength=20 class="inputAW" >
+               <br><br>
 
-            <!-- Prénom -->
-            <label for="prenom"> Prénom  </label>
-            <input type="prenom" id="prenom" name="prenom" placeholder="ex: Emma" minlength=5 maxlength=20 class="inputAW" >
-            <br><br>
+                <!----- Prénom ----->
+                <label for="prenom"> Prénom  </label>
+                <input type="prenom" id="prenom" name="prenom" placeholder="ex: Emma" minlength=5 maxlength=20 class="inputAW" >
+                <br><br>
             
-            <!-- Date de naissance -->
-            <label for="date"> Date de naissance  </label>
-            <input type="date" id="date" name="date" placeholder="JJ/MM/AAAA" class="inputAW" >
-            <br><br>
+                <!----- Date de naissance ----->
+                <label for="date"> Date de naissance  </label>
+                <input type="date" id="date" name="date" placeholder="JJ/MM/AAAA" class="inputAW" >
+                <br><br>
 
-            <!-- Adresse -->
-            <label for="adresse"> Adresse </label>
-            <input type="adresse" id="adresse" name="adresse" placeholder="ex: 10 Rue pierrehuet " minlength=5 maxlength=50 class="inputAW" >
-            <br><br>
+                <!----- Adresse ----->
+                <label for="adresse"> Adresse </label>
+                <input type="adresse" id="adresse" name="adresse" placeholder="ex: 10 Rue pierrehuet " minlength=5 maxlength=50 class="inputAW" >
+                <br><br>
 
-            <!-- Email -->
-            <label for="mail"> Email </label>
-            <input type="mail" id="mail" name="mail" placeholder="ex: marcel.dupont@exemple.com" minlength=5 maxlength=60 class="inputAW" >
-            <br><br>
+                <!----- Email ----->
+                <label for="mail"> Email </label>
+                <input type="mail" id="mail" name="mail" placeholder="ex: marcel.dupont@exemple.com" minlength=5 maxlength=60 class="inputAW" >
+                <br><br>
             
-            <p>
+              <p>
                 <input type="button" value="Valider" onclick="validation()"/>
-            </p>
-            <br>
+              </p>
+              <br>
               
               
-        </form>
+            </form>
             
             <!-- msg d'erreur -->
             <div id="error"></div>
             <!-- msg de validation -->
             <div id="resultat"></div>
 
-            
-        <!-- mes modification -->
+         </fieldset>   
+       
     </body>
 </html>
