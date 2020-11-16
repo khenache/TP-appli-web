@@ -15,7 +15,7 @@ $(document).ready(function () {
 
 
             $('#myModal').modal({ show: true })
-            $(".modal-title").text(`Bienvenue` + $("#nom").val() + $("#prénom").val());
+            $(".modal-title").text("Bienvenue" + $("#nom").val() + $("#prénom").val());
 
             var city = $("#adresse").val();
             var date = $("#date").val();
