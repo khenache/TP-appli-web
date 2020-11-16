@@ -1,82 +1,94 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2 Formulaire </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-       
-        <style>
 
-          body{
-              background-color: #a6bee2;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 17px;
-              margin: 0 auto;
-              max-width: 900px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <link rel="stylesheet" href="./Formulaire.css" />
-        <script src="./Programme.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TP2 Formulaire </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    </head>
-    
-    <body>     
-           <br><br>
-        <legend style=" margin-left:5px;background-color:#1f497d; padding-left:5px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:25px; border:8px solid #eeece1; font-size:30px;" > <b>  TP2 : Saisi d'une fiche "Personne"  <b> </legend>
-           <br><br>
-     
-        <fieldset style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
-        
-          <legend style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;" ><b> informations d'identification personnelle <b> </legend>
- 
-    
-        
-            <!----- Class de saisie ----->
-            <form id="formAW" onsubmit="validation()">
+  <style>
+    body {
+      background-color: #a6bee2;
+      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+      font-size: 17px;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+  </style>
 
-               <!----- Nom ----->
-               <label for="nom"> Nom  </label>
-               <input type="text" id="nom" name="nom" placeholder="ex: Bernard" minlength=5 maxlength=20 size="25" style="height:25px;" class="inputAW" >
-               <br><br>
+  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+  <link rel="stylesheet" href="./Formulaire.css" />
+  <script src="./Programme.js"></script>
 
-                <!----- Prénom ----->
-                <label for="prenom"> Prénom  </label>
-                <input type="prenom" id="prenom" name="prenom" placeholder="ex: Emma" minlength=5 maxlength=20 size="25" style="height:25px;" class="inputAW" >
-                <br><br>
-            
-                <!----- Date de naissance ----->
-                <label for="date"> Date de naissance  </label>
-                <input type="date" id="date" name="date" placeholder="JJ/MM/AAAA" style="height:25px;" class="inputAW" >
-                <br><br>
+</head>
 
-                <!----- Adresse ----->
-                <label for="adresse"> Adresse </label>
-                <input type="adresse" id="adresse" name="adresse" placeholder="ex: 10 Rue pierrehuet " minlength=5 maxlength=50 size="25" style="height:25px;" class="inputAW" >
-                <br><br>
+<body>
+  <br><br>
+  <legend
+    style=" margin-left:5px;background-color:#1f497d; padding-left:5px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:25px; border:8px solid #eeece1; font-size:30px;">
+    <b> TP2 : Saisi d'une fiche "Personne" <b> </legend>
+  <br><br>
 
-                <!----- Email ----->
-                <label for="mail"> Email </label>
-                <input type="mail" id="mail" name="mail" placeholder="ex: marcel.dupont@exemple.com" minlength=5 maxlength=60 size="25"style="height:25px;"  class="inputAW" >
-                <br><br>
-            
-              <p>
-                <input type="button" value="Valider" style=" margin-left:30px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:10px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:30px;" onclick="validation()"/>
-              </p>
-              <br>
-              
-              
-            </form>
-            
-            <!-- msg d'erreur -->
-            <div id="error"></div>
-            <!-- msg de validation -->
-            <div id="resultat"></div>
+  <fieldset
+    style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
 
-         </fieldset>   
-       
-    </body>
+    <legend
+      style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;">
+      <b> informations d'identification personnelle <b> </legend>
+
+
+
+    <!----- Class de saisie ----->
+    <form id="formAW" onsubmit="validation()">
+
+      <!----- Nom ----->
+      <label for="nom"> Nom </label>
+      <input type="text" id="nom" name="nom" placeholder="ex: Bernard" minlength=5 maxlength=20 size="25"
+        style="height:25px;" class="inputAW">
+      <br><br>
+
+      <!----- Prénom ----->
+      <label for="prenom"> Prénom </label>
+      <input type="prenom" id="prenom" name="prenom" placeholder="ex: Emma" minlength=5 maxlength=20 size="25"
+        style="height:25px;" class="inputAW">
+      <br><br>
+
+      <!----- Date de naissance ----->
+      <label for="date"> Date de naissance </label>
+      <input type="date" id="date" name="date" placeholder="JJ/MM/AAAA" style="height:25px;" class="inputAW">
+      <br><br>
+
+      <!----- Adresse ----->
+      <label for="adresse"> Adresse </label>
+      <input type="adresse" id="adresse" name="adresse" placeholder="ex: 10 Rue pierrehuet " minlength=5 maxlength=50
+        size="25" style="height:25px;" class="inputAW">
+      <br><br>
+
+      <!----- Email ----->
+      <label for="mail"> Email </label>
+      <input type="mail" id="mail" name="mail" placeholder="ex: marcel.dupont@exemple.com" minlength=5 maxlength=60
+        size="25" style="height:25px;" class="inputAW">
+      <br><br>
+
+      <p>
+        <input type="button" value="Valider"
+          style=" margin-left:30px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:10px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:30px;"
+          onclick="validation()" />
+      </p>
+      <br>
+
+
+    </form>
+
+    <!-- msg d'erreur -->
+    <div id="error"></div>
+    <!-- msg de validation -->
+    <div id="resultat"></div>
+
+  </fieldset>
+
+</body>
+
 </html>

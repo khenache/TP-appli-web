@@ -1,82 +1,139 @@
 <!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>TP2 Formulaire </title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-       
-        <style>
 
-          body{
-              background-color: #a6bee2;              
-              font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-              font-size: 17px;
-              margin: 0 auto;
-              max-width: 900px;              
-          }
-        </style>
-        
-        <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
-        <link rel="stylesheet" href="./Formulaire.css" />
-        <script src="./Programme.js"></script>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TP3 Formulaire </title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-    </head>
-    
-    <body>     
-           <br><br>
-        <legend style=" margin-left:5px;background-color:#1f497d; padding-left:5px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:25px; border:8px solid #eeece1; font-size:30px;" > <b>  TP2 : Saisi d'une fiche "Personne"  <b> </legend>
-           <br><br>
-     
-        <fieldset style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
-        
-          <legend style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;" ><b> informations d'identification personnelle <b> </legend>
- 
-    
-        
-            <!----- Class de saisie ----->
-            <form id="formAW" onsubmit="validation()">
+  <style>
+    body {
+      background-color: #a6bee2;
+      font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+      font-size: 17px;
+      margin: 0 auto;
+      max-width: 800px;
+    }
 
-               <!----- Nom ----->
-               <label for="nom"> Nom  </label>
-               <input type="text" id="nom" name="nom" placeholder="ex: Bernard" minlength=5 maxlength=20 size="25" style="height:25px;" class="inputAW" >
-               <br><br>
+    .modal-body img {
 
-                <!----- Prénom ----->
-                <label for="prenom"> Prénom  </label>
-                <input type="prenom" id="prenom" name="prenom" placeholder="ex: Emma" minlength=5 maxlength=20 size="25" style="height:25px;" class="inputAW" >
-                <br><br>
-            
-                <!----- Date de naissance ----->
-                <label for="date"> Date de naissance  </label>
-                <input type="date" id="date" name="date" placeholder="JJ/MM/AAAA" style="height:25px;" class="inputAW" >
-                <br><br>
+      max-width: 100%;
 
-                <!----- Adresse ----->
-                <label for="adresse"> Adresse </label>
-                <input type="adresse" id="adresse" name="adresse" placeholder="ex: 10 Rue pierrehuet " minlength=5 maxlength=50 size="25" style="height:25px;" class="inputAW" >
-                <br><br>
+    }
 
-                <!----- Email ----->
-                <label for="mail"> Email </label>
-                <input type="mail" id="mail" name="mail" placeholder="ex: marcel.dupont@exemple.com" minlength=5 maxlength=60 size="25"style="height:25px;"  class="inputAW" >
-                <br><br>
-            
-              <p>
-                <input type="button" value="Valider" style=" margin-left:30px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:10px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:30px;" onclick="validation()"/>
-              </p>
-              <br>
-              
-              
-            </form>
-            
-            <!-- msg d'erreur -->
-            <div id="error"></div>
-            <!-- msg de validation -->
-            <div id="resultat"></div>
+    .link {
 
-         </fieldset>   
-       
-    </body>
+      text-decoration: none;
+      color: rgb(139, 61, 25);
+
+    }
+  </style>
+
+  <!-- Code à dé-commenter si besoin de fichier CSS ou JS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css  ">
+  <script src="js/jquery-3.2.1.slim.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/form-jquery-validation.js"></script>
+
+</head>
+
+
+<body>
+  <fieldset
+    style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
+
+    <legend
+      style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;">
+      <b> informations d'identification personnelle <b> </legend>
+
+    <h1>
+      TP AW Formulaire V2
+    </h1>
+    <div class="container">
+
+      <form>
+
+        <div class="form-group">
+          <label for="nom"> Nom </label>
+          <input type="text" class="form-control" id="nom" placeholder="ex: buttler">
+        </div>
+
+        <div class="form-group">
+          <label for="prénom "> Prénom </label>
+          <input type="text" class="form-control" id="prénom" placeholder="ex: gerrard">
+        </div>
+
+        <div class="form-group">
+          <label for="date de naissance"> Date de naissance</label>
+          <input type="date" class="form-control" id="date" placeholder="JJ/MM/AAAA">
+        </div>
+
+        <div class="form-group">
+          <label for="adresse"> Adresse</label>
+          <input type="adresse" class="form-control" id="adresse" placeholder="ex : 10 rue pierrehuet">
+        </div>
+
+
+        <div class="form-row">
+
+          <label for="inputState">Pays</label>
+          <select id="inputState" class="form-control">
+            <option selected>Choose...</option>
+            <option>France</option>
+            <option>France</option>
+            <option>France</option>
+            <option>France</option>
+            <option>France</option>
+            <option>France</option>
+            <option>France</option>
+          </select>
+        </div>
+
+        <div class="form-group col-md-4">
+          <label for="Ville">Ville</label>
+          <input type="text" class="form-control" id="ville" placeholder="Paris">
+        </div>
+
+
+
+
+        <div class="form-group">
+          <label for="email">Adresse email</label>
+          <input type="email" class="form-control" id="email" placeholder="ex :exemple@gmail.com">
+        </div>
+
+
+        <button type="button" class="btn btn-primary" id="button"> Valider</button>
+      </form>
+    </div>
+
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Corps de la modal à modifier après validation du formulaire</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Enregister </button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </fieldset>
+</body>
+
+
 </html>
