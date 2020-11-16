@@ -15,7 +15,7 @@
       font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
       font-size: 16px;
       margin: 0 auto;
-      max-width: 800px;
+      max-width: 700px;
     }
 
     .modal-body img {
@@ -44,34 +44,46 @@
 
 <body>
   <fieldset
-    style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #1f497d; background-color:#eeece1;">
+    style="border-radius: 5px; padding: 5px; min-height:150px; border:8px solid #699ad6; background-color:#d8d2ad;">
 
     <legend
-      style=" margin-left:20px;background-color:#1f497d; padding-left:10px; padding-top:5px; padding-right:120px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;">
+      style=" margin-left:0px;background-color:#699ad6; padding-left:10px; padding-top:5px; padding-right:100px; padding-bottom:5px; ; color:white; border-radius:15px; border:8px solid #eeece1; font-size:20px;">
       <b> Formulaire d'identifications <b> </legend>
 
-        <div class="container">
+    <div class="container">
 
       <form>
 
         <div class="form-group">
           <label for="nom"> Nom </label>
-          <input type="text" class="form-control" id="nom" placeholder="ex: buttler" required>
+          <input type="text" class="form-control" id="nom" placeholder="ex: buttler">
+          <small id="nom" class="form-text text-muted">
+            Le champ "Nom" est Obligatoire
+          </small>
         </div>
 
         <div class="form-group">
           <label for="prénom "> Prénom </label>
           <input type="text" class="form-control" id="prénom" placeholder="ex: gerrard">
+          <small id="prénom" class="form-text text-muted">
+            Le champ "Prénom" est Obligatoire
+          </small>
         </div>
 
         <div class="form-group">
           <label for="date de naissance"> Date de naissance (Obligatoire)</label>
           <input type="date" class="form-control" id="date" placeholder="JJ/MM/AAAA">
+          <small id="date" class="form-text text-muted">
+            Le champ "Date de naissance" est Obligatoire
+          </small>
         </div>
 
         <div class="form-group">
           <label for="adresse"> Adresse </label>
           <input type="adresse" class="form-control" id="adresse" placeholder="ex : 10 rue pierrehuet">
+          <small id="adresse" class="form-text text-muted">
+            Le champ "Adresse" est Obligatoire
+          </small>
         </div>
 
 
@@ -82,7 +94,7 @@
             <option selected>Choose...</option>
             <option>France</option>
             <option>Belgique</option>
-            <option>allemagne</option>
+            <option>Allemagne</option>
             <option>Suisse</option>
             <option>Anglettere</option>
             <option>Italie</option>
@@ -90,17 +102,30 @@
           </select>
         </div>
 
-        <div class="form-group col-md-4">
-          <label for="Ville">Ville </label>
-          <input type="text" class="form-control" id="ville" placeholder="Paris">
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="Ville">Ville </label>
+            <input type="text" class="form-control" id="ville" placeholder="ex : Paris">
+            <small id="ville" class="form-text text-muted">
+              Le champ "Ville" est Obligatoire
+            </small>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="code postale">Code postale </label>
+            <input type="text" class="form-control" id="Code postale" placeholder="ex : 94 000 ">
+          </div>
         </div>
 
 
 
 
         <div class="form-group">
-          <label for="email">Adresse email </label>
+          <label for="email">Adresse E-mail </label>
           <input type="email" class="form-control" id="email" placeholder="ex :exemple@gmail.com">
+          <small id="email" class="form-text text-muted">
+            Le champ "E-mail" est Obligatoire
+          </small>
         </div>
 
 

@@ -6,11 +6,11 @@ $(document).ready(function () {
         event.preventDefault();
 
     
-        if (($("#nom").val() && $("#prenom").val() && $("#date").val() && $("#adresse").val() && $("#email").val()) != "") {
+        if (($("#nom").val() && $("#prenom").val() && $("#date").val() && $("#adresse").val() && $("#email").val() && $("#pays").val()&& $("#ville").val()) != "") {
 
 
             $('#myModal').modal({ show: true })
-            $(".modal-title").text("Bienvenue " + $("#nom").val() + $("#prénom").val());
+            $(".modal-title").text(`Bienvenue ${$("#nom").val()}${$("#prénom").val()}`);
 
             var city = $("#adresse").val();
             var date = $("#date").val();
